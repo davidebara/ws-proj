@@ -1,0 +1,27 @@
+Date folosite la inserare (pentru testarea rapidă)
+    Hungary
+    03gj2
+    https://en.wikipedia.org/wiki/Hungary
+
+Date folosite pentru a testa serverul JSON
+{
+    "wars": [
+    ],
+    "countries": [
+    ],
+    "belligerents": [
+    ]
+}
+
+Bonus
+- integrare cu API-ul OpenAI
+- utilizarea unei alte librării pentru cererile HTTP (symfony)
+
+Librării PHP
+composer require guzzlehttp/guzzle:^7.8
+composer require easyrdf/easyrdf:^1.1
+composer require ml/json-ld:^1.2
+composer require symfony/http-client:^7.0
+composer require orhanerday/open-ai:^5.1
+
+Datele initiale JSON-LD sunt preluate de pe: https://websemantic.netlify.app/

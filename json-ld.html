@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sursa initiala de date Razboaie</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        button {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script type="application/ld+json">
+        {
+            "@context": {
+                "@vocab":"http://schema.org/",
+                "kg": "http://g.co/kg/m/",
+                "dbr": "http://dbpedia.org/page/",
+                "sameAs": {"@type":"@id"}
+            },
+
+            "@graph": [
+                {
+                    "@id": "kg:0_x6d5x",
+                    "@type": "Event",
+                    "name": "Russo-Ukrainian War",
+                    "sameAs": "dbr:Russo-Ukrainian_War",
+                    "startDate": "2014-02-27",
+                    "endDate": "",
+                    "url": {"@id": "https://en.wikipedia.org/wiki/Russo-Ukrainian_War"}
+                },
+                {
+                    "@id": "kg:07t21",
+                    "@type": "Country",
+                    "event": {"@id": "kg:0_x6d5x"},
+                    "name": "Ukraine",
+                    "sameAs": "dbr:Ukraine",
+                    "url":{"@id": "https://en.wikipedia.org/wiki/Ukraine"}
+                },
+                {
+                    "@id": "kg:0f8l9c",
+                    "@type": "Country",
+                    "event": [
+                      {
+                        "@id": "kg:0cm2xh"
+                      },
+                      {
+                        "@id": "kg:081pw"
+                      }
+                    ],
+                    "name": "France",
+                    "sameAs": "dbr:France",
+                    "url": {"@id": "https://en.wikipedia.org/wiki/France"}
+                },
+                {
+                    "@id": "kg:081pw",
+                    "@type": "Event",
+                    "endDate": "1945-09-02",
+                    "name": "World War II",
+                    "sameAs": "dbr:World_War_II",
+                    "startDate": "1939-09-01",
+                    "url": {"@id": "https://en.wikipedia.org/wiki/World_War_II"}
+                },
+                {
+                    "@id": "kg:0cm2xh",
+                    "@type": "Event",
+                    "endDate": "1918-11-11",
+                    "name": "World War I",
+                    "sameAs": "dbr:World_War_I",
+                    "startDate": "1914-07-28",
+                    "url": {"@id": "https://en.wikipedia.org/wiki/World_War_I"}
+                },
+                {
+                    "@id": "kg:06bnz",
+                    "@type": "Country",
+                    "event": [
+                      {
+                        "@id": "kg:0cm2xh"
+                      },
+                      {
+                        "@id": "kg:0_x6d5x"
+                      },
+                      {
+                        "@id": "kg:081pw"
+                      }
+                    ],
+                    "name": "Russia",
+                    "sameAs": "dbr:Russia",
+                    "url": {"@id": "https://en.wikipedia.org/wiki/Russia"}
+                },
+                {
+                    "@id": "kg:0345h",
+                    "@type": "Country",
+                    "event": [
+                      {
+                        "@id": "kg:0cm2xh"
+                      },
+                      {
+                        "@id": "kg:081pw"
+                      }
+                    ],
+                    "name": "Germany",
+                    "sameAs": "dbr:Germany",
+                    "url": {"@id": "https://en.wikipedia.org/wiki/Germany"}
+                  }
+            ]
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>Event</th>
+                <th>Countries</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+            </tr>
+            <tr>
+               <td>Russo-Ukrainian War </td>
+               <td>Russia, Ukraine</td>
+               <td>2014-02-27</td>
+               <td></td>
+            </tr>
+            <tr>
+                <td>World War II</td>
+                <td>France, Russia, Germany</td>
+                <td>1939-09-01</td>
+                <td>1945-09-02</td>
+            </tr>
+            <tr>
+                <td>World War I</td>
+                <td>France, Russia, Germany</td>
+                <td>1914-07-28</td>
+                <td>1918-11-11</td>
+            </tr>
+        </tableid=>
+    </div>
+    
+</body>
+</html>

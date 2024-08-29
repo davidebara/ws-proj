@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transfer de date - Bara Ciurca</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    button {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+      border-width: 1px;
+    }
+
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="margin-bottom: 9px;">Proiect Web Semantic</h1>
+  <div style="margin-bottom: 25px;">Davide Bara & Radu Ciurca</div>
+
+  <h3 style="margin-bottom: 9px;">Date JSON-LD</h3>
+  <button onclick="fetchJSONLD()">Butonul 1 (scraping & afisare JSON-LD)</button>
+  <div id="jsonldData">
+    <table id="jsonldTable">
+      <tr>
+        <th>Event (War)</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Country</th>
+        <th>Country URL</th>
+      </tr>
+    </table>
+  </div>
+
+  <h3 style="margin-top: 36px; margin-bottom: 9px;">Formular</h3>
+  <form id="formular" style="margin-top: 0px;">
+    <label for="eventId">Event (War):</label>
+    <select id="eventId" name="eventId">
+    </select>
+
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country">
+
+    <label for="countryId">CountryId:</label>
+    <input type="text" id="countryId" name="countryId">
+
+    <label for="countryUrl">Country URL:</label>
+    <input type="url" id="countryUrl" name="countryUrl">
+
+    <button type="button" id="sendFormData" onclick="submitForm()" style="display: block; margin-top: 9px;">Butonul 2
+      (trimite datele spre serverul RDF4J)</button>
+  </form>
+
+  <div id="RezervatAfisare"
+    style="border:1px solid grey; min-height: 15px; max-width:900px; color: grey; padding: 10px 10px 10px 10px; border-radius: 6px; word-wrap: break-word;">
+    Aici vor apărea mesajele de confirmare
+  </div>
+
+  <h3 style="margin-top: 42px; margin-bottom: 9px;">Date RDF4J</h3>
+  <button onclick="fetchRDF()">Butonul 3 (afisare date RDF)</button>
+  <table id="belligerentsTable">
+    <thead>
+      <tr>
+        <th>Event Name</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Country Name</th>
+        <th>Country URL</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h3 style="margin-top: 42px; margin-bottom: 9px;">Date JSON inserate</h3>
+  <button onclick="insertJSON()">Butonul 4 (inserare date JSON server)</button>
+  <button onclick="fetchInsertedJSON()">Butonul 5 (afisare date JSON REST Server)</button>
+  <div id="resttext"
+    style="border:1px solid grey; min-height: 15px; max-width:900px; color: grey; padding: 10px 10px 10px 10px; border-radius: 6px; word-wrap: break-word; margin-bottom: 12px;">
+    Aici va apărea mesajul de confirmare pentru inserarea datelor pe serverul REST JSON
+  </div>
+  <div id="insertedJSONData">
+  </div>
+
+  <h3 style="margin-top: 42px; margin-bottom: 9px;">Text generat de GPT-3.5 Turbo</h3>
+  <button onclick="displayLlmText()" class="chatgpt-button">Butonul 6 (OpenAI API) </button>
+  
+  <div id="llmText"
+    style="border:1px solid grey; min-height: 15px; max-width:900px; color: grey; padding: 10px 10px 10px 10px; border-radius: 6px; word-wrap: break-word;">
+    Aici va apărea textul generat folosind setul nostru de date inițial
+  </div>
+</body>
+<script src="index.js"></script>
+
+</html>
